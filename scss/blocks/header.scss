@@ -1,0 +1,18 @@
+.header {
+  background-color: $black;
+  color: $white;
+  position: relative;
+  z-index: 1;
+}
+
+.header::after {
+  content: "";
+  background-image: url(../../img/back.svg);
+  position: absolute;
+  opacity: 0.1;
+  top: 0;
+  left: -60px;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}

@@ -1,0 +1,17 @@
+$black: #000000;
+$white: #ffffff;
+
+$tablet-width: 660px;
+$desktop-width: 1000px;
+.container {
+  padding-left: 20px;
+  padding-right: 20px;
+  @media (min-width:$tablet-width) {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+  @media (min-width:$desktop-width) {
+    padding-left: 140px;
+    padding-right: 140px;
+  }
+}
