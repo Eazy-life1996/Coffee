@@ -1,18 +1,126 @@
 .header {
   background-color: $black;
+  padding-bottom: 20px;
   color: $white;
   position: relative;
-  z-index: 1;
+  z-index: 2;
 }
 
-.header::after {
-  content: "";
-  background-image: url(../../img/back.svg);
-  position: absolute;
+.header::before {
+  content: '';
+  background: url(../../img/back.svg);
+  background-position: 80px 40px;
   opacity: 0.1;
-  top: 0;
-  left: -60px;
-  right: 0;
-  bottom: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
   z-index: -1;
+}
+
+.header__block:first-child {
+  padding-top: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 15px;
+}
+
+.header__burger {
+  margin-top: 8px;
+  display: block;
+  position: relative;
+  width: 35px;
+  height: 25px;
+}
+
+.header__burger span {
+  width: 100%;
+  height: 2px;
+  background-color: $white;
+  position: absolute;
+  top: 11px;
+  transition: all 0.3s ease 0s;
+}
+
+
+.header__burger::before,
+.header__burger::after {
+  content: '';
+  background-color: $white;
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  left: 0;
+  transition: all 0.3s ease 0s;
+}
+
+.header__burger::before {
+ top: 0;
+}
+
+.header__burger::after {
+  bottom: 0;
+}
+
+.active-btn::before {
+  transform: rotate(45deg);
+  top: 11px;
+}
+
+.active-btn::after {
+  transform: rotate(-45deg);
+  bottom: 11px;
+}
+
+.header__burger.active-btn span {
+  transform: scale(0);
+}
+
+.header__menu {
+  display: none;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.active {
+  transition: all 0.3s ease 0s;
+  top: 65px;
+  display: block;
+}
+
+.header__item {
+  margin-bottom: 10px;
+}
+
+.header__link {
+  font-size: 18px;
+  color: $white;
+
+  &:hover {
+    color: rgba($white, 0.8);
+  }
+}
+
+.header__link--active {
+  color: $red;
+  font-weight: bold;
+}
+
+.header__link-btn {
+  color: $white;
+  background-color: $red;
+  width: 128px;
+  padding: 10px;
+  text-align: center;
+  border-radius: 5px;
+  margin-top: 15px;
+
+  &:hover {
+    background-color: rgba($red, 0.8);
+  }
+}
+
+.header__p {
+  margin-top: 15px;
 }
