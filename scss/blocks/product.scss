@@ -1,0 +1,169 @@
+.product {
+  padding-top: 30px;
+  padding-bottom: 80px;
+}
+
+.product__title {
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 130%;
+  margin-bottom: 10px;
+}
+
+.product__p {
+  color: rgba($black, 0.6);
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 160%;
+}
+
+.product__img {
+  width: 280px;
+}
+
+.product__slides {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.product__price {
+  color: $black-second;
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 150%;
+  margin-top: 35px;
+  margin-bottom: 10px;
+}
+
+.product__subtitle {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 130%;
+}
+
+.product__description {
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 160%;
+  color: rgba($black, 0.6);
+  margin-top: 15px;
+  margin-bottom: 20px;
+}
+
+.product__input {
+  text-align: center;
+  padding-top: 13px;
+  padding-bottom: 13px;
+  border: 1px solid $black;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 130%;
+  border-right: none;
+}
+
+.product__buttons-block {
+  display: flex;
+  flex-direction: column;
+}
+
+.product__inner {
+  display: flex;
+}
+
+.product__number {
+  text-align: center;
+  border: 1px solid $black;
+  width: 57px;
+  height: 27px;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.product__plus {
+  border-bottom: none;
+}
+
+.product__button {
+  width: 157px;
+  padding: 10px;
+  text-align: center;
+  background-color: $red;
+  color: $white;
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 150%;
+  margin-left: 20px;
+
+  &:hover {
+    background-color: rgba($red, 0.8);
+  }
+}
+
+.product__slider {
+  position: relative;
+  margin-top: 30px;
+}
+
+.slick-list {
+  overflow: hidden;
+}
+
+.slick-track {
+  display: flex;
+}
+
+.product__slider .slick-arrow {
+  font-size: 0;
+  position: absolute;
+  top: 490px;
+  background-image: url(../../img/arrow.svg);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  width: 40px;
+  height: 40px;
+  z-index: 10;
+}
+
+.product__slider .slick-next {
+  background-size: 100%;
+  right: 28%;
+}
+
+.product__slider .slick-prev {
+  background-size: 100%;
+  left: 28%;
+  transform: rotate(180deg);
+}
+
+.product__slider .slick-disabled {
+  opacity: 0.6;
+}
+
+@media (min-width: $tablet-width) {
+
+  .product__title,
+  .product__p {
+    text-align: center;
+  }
+
+  .product__title {
+    font-size: 30px;
+  }
+
+  .product__p {
+    width: 40%;
+    margin: 0 auto;
+  }
+
+  .product__slider .slick-arrow {
+    top: 50%;
+  }
+
+  .product__slider .slick-next {
+    right: 0;
+  }
+
+  .product__slider .slick-prev {
+    left: 0;
+  }
+}

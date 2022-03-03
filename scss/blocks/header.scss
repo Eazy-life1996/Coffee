@@ -272,6 +272,7 @@
   }
 
   .header__title {
+    margin-top: 50px;
     font-size: 58px;
   }
 
@@ -310,5 +311,13 @@
   
   .header__link-btn {
     margin-top: 48px;
+  }
+
+  .header__input--active {
+    width: 300px;
+    padding: 10px;
+    top: 65px;
+    right: 0px;
+    font-size: 18px;
   }
 }

@@ -11,3 +11,11 @@ let inputSearch = document.querySelector('.header__input');
 btnForInput.addEventListener("click", function () {
   inputSearch.classList.toggle('header__input--active');
 });
+
+$(document).ready(function () {
+  $('.product__slider').slick({
+    dots: false,
+    arrows: true,
+    infinite: false
+  });
+});
