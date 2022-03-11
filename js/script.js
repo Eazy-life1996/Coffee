@@ -5,6 +5,7 @@ btn.addEventListener("click", function () {
   menu.classList.toggle('active');
   btn.classList.toggle('active-btn');
 });
+
 let btnForInput = document.querySelector('.header__button');
 let inputSearch = document.querySelector('.header__input');
 
@@ -16,6 +17,17 @@ $(document).ready(function () {
   $('.product__slider').slick({
     dots: false,
     arrows: true,
-    infinite: false
+    infinite: false,
+    slidesToShow: 3,
+    slidesToScroll: 2,
+    responsive: [
+      {
+        breakpoint: 1100,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
   });
 });
