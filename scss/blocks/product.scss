@@ -4,6 +4,7 @@
 }
 
 .product__title {
+  text-align: center;
   font-weight: 600;
   font-size: 25px;
   line-height: 130%;
@@ -11,6 +12,7 @@
 }
 
 .product__p {
+  text-align: center;
   color: rgba($black, 0.6);
   font-weight: normal;
   font-size: 14px;
@@ -116,7 +118,7 @@
   font-size: 0;
   position: absolute;
   top: 490px;
-  background-image: url(../../img/arrow.svg);
+  background-image: url(../img/arrow.svg);
   background-repeat: no-repeat;
   background-position: 0 0;
   width: 40px;
@@ -215,6 +217,24 @@
     font-size: 22px;
     padding-top: 11px;
     padding-bottom: 10px;
+    width: 56px;
+  }
+
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0;
+    /* <-- Apparently some margin are still there even though it's hidden */
+  }
+
+  input[type="number"] {
+    -moz-appearance: textfield;
+  }
+
+  input[type="number"]:hover,
+  input[type="number"]:focus {
+    -moz-appearance: number-input;
   }
 
   .product__slides {
