@@ -1,0 +1,129 @@
+.contacts {
+  background-color: $border;
+  color: $white;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.contacts__title {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 20px;
+  text-align: center;
+}
+
+.contacts__subtitle {
+  border-bottom: 2px solid $red;
+  padding-bottom: 15px;
+  width: 85px;
+  margin: 0 auto;
+  font-size: 18px;
+  color: $red;
+}
+
+.contacts__link {
+  color: $white;
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 240px;
+  margin: 0 auto;
+  margin-bottom: 15px;
+
+  &:hover {
+    color: rgba($white, 0.6);
+  }
+}
+
+.contacts__img {
+  margin-right: 10px;
+}
+
+.contacts__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 25px;
+}
+
+.contacts__social-link:hover circle,
+.contacts__social-link:hover path {
+  stroke: $red;
+}
+
+@media (min-width:$tablet-width) {
+  .contacts {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .contacts__subtitle {
+    font-size: 22px;
+    width: 110px;
+    text-align: center;
+  }
+
+  .contacts__title {
+    font-size: 26px;
+    margin-top: 25px;
+    margin-bottom: 30px;
+  }
+
+  .contacts__link {
+    font-size: 16px;
+  }
+
+  .contacts__list {
+    width: 320px;
+    margin: 0 auto;
+    margin-top: 35px;
+  }
+}
+
+@media (min-width:$desktop-width) {
+  .contacts {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    position: relative;
+  }
+
+  .contacts::before {
+    content: '';
+    background-image: url(../../img/coffe-beens1.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 415px;
+    height: 578px;
+  }
+
+  .contacts::after {
+    content: '';
+    background-image: url(../../img/coffee-beens2.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 445px;
+    height: 578px;
+  }
+
+  .contacts__subtitle {
+    font-size: 24px;
+    width: 115px;
+  }
+
+  .contacts__title {
+    font-weight: 600;
+    font-size: 43px;
+    line-height: 130%;
+  }
+
+  .contacts__link {
+    font-size: 24px;
+  }
+}
