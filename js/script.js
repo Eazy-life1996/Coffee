@@ -1,16 +1,35 @@
-let btn = document.querySelector('.header__burger');
-let menu = document.querySelector('.header__menu');
+'use strict';
 
-btn.addEventListener("click", function () {
-  menu.classList.toggle('active');
-  btn.classList.toggle('active-btn');
-});
+window.addEventListener('DOMContentLoaded', () => {
 
-let btnForInput = document.querySelector('.header__button');
-let inputSearch = document.querySelector('.header__input');
+  let btn = document.querySelector('.header__burger');
+  let menu = document.querySelector('.header__menu');
+  const wrapper = document.querySelector('.product__slider');
+  const input = document.querySelectorAll('.product__input');
+  const btnPlus = document.querySelectorAll('.product__plus');
+  const btnMinus = document.querySelectorAll('.product__minus');
 
-btnForInput.addEventListener("click", function () {
-  inputSearch.classList.toggle('header__input--active');
+  btn.addEventListener("click", function () {
+    menu.classList.toggle('active');
+    btn.classList.toggle('active-btn');
+  });
+
+  function getInputNumber() {
+
+      btnPlus.forEach((item, i) => {
+        item.addEventListener('click', () => {
+          input[i].value = parseInt(input[i].value) + 1;
+        });
+      });
+
+    btnMinus.forEach((item, i) => {
+      item.addEventListener('click', () => {
+        input[i].value = input[i].value > 0 ? parseInt(input[i].value) - 1 : 0;
+      });
+    });
+  }
+
+  getInputNumber();
 });
 
 $(document).ready(function () {
